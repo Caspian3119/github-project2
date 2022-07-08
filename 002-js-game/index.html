@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/images/questionmark.png">
+</head>
+<body>
+
+    <div class="header">
+        <img class = "infoButton"src="assets/images/info.png" alt="">
+        <img class = "refresh"src="assets/images/refresh.png" alt="">
+    </div>
+
+    <div class="modalInfo">
+        <button class="closeInfo hidden">&times;</button>
+        <h2>Objective</h2>
+        <p>Match the emojis and complete the puzzle before the time runs out.</p><br>
+        <p>Goodluck!</p>
+        <button class="startGame" onclick = "startGame()">Start Game</button>
+    </div>
+
+    <div class="container">
+        <h1>MEMORY GAME</h1>
+        <div class="box" data-emoji="wink">
+            <img class = "front1" src="assets/images/wink.png" alt="">
+            <img class = "back" src="assets/images/questionmark.png" alt="">
+        </div>
+        <div class="box" data-emoji="wink">
+            <img class = "front2" src="assets/images/wink.png" alt="">
+            <img class = "back" src="assets/images/questionmark.png" alt="">
+        </div>
+        <div class="box" data-emoji="love">
+            <img class = "front3" src="assets/images/love.png" alt="">
+            <img class = "back" src="assets/images/questionmark.png" alt="">
+        </div>
+        <div class="box" data-emoji="love">
+            <img class = "front4" src="assets/images/love.png" alt="">
+            <img class = "back" src="assets/images/questionmark.png" alt="">
+        </div>
+        <div class="box" data-emoji="angry">
+            <img class = "front5" src="assets/images/angry.png" alt="">
+            <img class = "back" src="assets/images/questionmark.png" alt="">
+        </div>
+        <div class="box" data-emoji="angry">
+            <img class = "front6" src="assets/images/angry.png" alt="">
+            <img class = "back" src="assets/images/questionmark.png" alt="">
+        </div>
+        <div class="box" data-emoji="shock">
+            <img class = "front7" src="assets/images/shock.png" alt="">
+            <img class = "back" src="assets/images/questionmark.png" alt="">
+        </div>
+        <div class="box" data-emoji="shock">
+            <img class = "front8" src="assets/images/shock.png" alt="">
+            <img class = "back" src="assets/images/questionmark.png" alt="">
+        </div>
+        <div class="box" data-emoji="lol">
+            <img class = "front9" src="assets/images/lol.png" alt="">
+            <img class = "back" src="assets/images/questionmark.png" alt="">
+        </div>
+        <div class="box" data-emoji="lol">
+            <img class = "front10" src="assets/images/lol.png" alt="">
+            <img class = "back" src="assets/images/questionmark.png" alt="">
+        </div>
+        <div class="box" data-emoji="question">
+            <img class = "front11" src="assets/images/question.png" alt="">
+            <img class = "back" src="assets/images/questionmark.png" alt="">
+        </div>
+        <div class="box" data-emoji="question">
+            <img class = "front12" src="assets/images/question.png" alt="">
+            <img class = "back" src="assets/images/questionmark.png" alt="">
+        </div>
+        <div class="box" data-emoji="glasses">
+            <img class = "front13" src="assets/images/glasses.png" alt="">
+            <img class = "back" src="assets/images/questionmark.png" alt="">
+        </div>
+        <div class="box" data-emoji="glasses">
+            <img class = "front14" src="assets/images/glasses.png" alt="">
+            <img class = "back" src="assets/images/questionmark.png" alt="">
+        </div>
+        <div class="box" data-emoji="sad">
+            <img class = "front15" src="assets/images/sad.png" alt="">
+            <img class = "back" src="assets/images/questionmark.png" alt="">
+        </div>
+        <div class="box" data-emoji="sad">
+            <img class = "front16" src="assets/images/sad.png" alt="">
+            <img class = "back" src="assets/images/questionmark.png" alt="">
+        </div>
+    </div>
+    
+    <div class="modalCongrats hidden">
+        <h2>Congratulations!</h2>
+        <p>You Won!</p>
+        <div id = "clicks"></div>
+        <div id = "seconds"></div>
+        <button class="playAgain" onclick="playAgain()">Play Again?</button>
+     </div>
+
+     <div class="modalGameOver hidden">
+        <h2>Game Over!</h2>
+        <p>You Ran out of time!</p>
+        <button class="playAgain" onclick="playAgain()">Try Again?</button>
+     </div>
+    
+    <div class="timer">
+        <p id="time" id="display">1:00</p>
+    </div>
+    
+    <div class="overlay"></div>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
